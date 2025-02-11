@@ -3,7 +3,7 @@ import { createContext } from 'react';
 
 const mainContent = createContext();
 
-export default function DataProvider({children}){
+export default function DataProvider({children}){   
     const [login,setLogin] = useState(false);
 
     const [loginUser,setLoginUser] = useState({

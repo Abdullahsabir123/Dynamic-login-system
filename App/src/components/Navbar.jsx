@@ -4,18 +4,12 @@ import useData from '../hooks/useData';
 
 export default function Navbar() {
     const { login, setLogin, loginUser } = useData(); // Destructuring loginUser from useData
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-
-    // Handle dropdown toggle
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
-    };
 
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Facbook</a>
+                    <a className="navbar-brand" href="#">Facebook</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">

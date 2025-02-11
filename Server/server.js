@@ -1,5 +1,4 @@
 const express = require("express");
-require("dotenv").config();
 const cors = require("cors");
 const app = express();
 const port = 3000;
@@ -35,9 +34,9 @@ app.post("/login", async (req, res) => {
 
 // Database code starts
 const mongoose = require("mongoose");
+// require("dotenv").config();
 
-const mongoString = "mongodb+srv://abdullahsabir558:abdullahsabir558@cluster0.pchia.mongodb.net/";
-// const mongoString = process.env.DATABASE_URL
+const mongoString = "mongodb+srv://abdullahsabir558:abdullahsabir558@cluster0.gvfiy.mongodb.net/mongodb"
 
 mongoose.connect(mongoString);
 const database = mongoose.connection;
@@ -68,10 +67,11 @@ const userSchema = new mongoose.Schema({
 });
 
 // Database Model
-const userModel = new mongoose.model("userlists", userSchema);
+const userModel = new mongoose.model("students", userSchema);
 
 // Create POST Method  Request
 app.post("/reg", async (req, res) => {
+  res.send(200)
   console.log("Incoming Data:", req.body);
   const { fullName, email, pwd } = req.body;
 
